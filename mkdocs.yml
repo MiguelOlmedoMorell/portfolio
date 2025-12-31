@@ -1,0 +1,25 @@
+site_name: Miguel Olmedo Morell's Portfolio
+site_description: Miguel Olmedo Morell's Portfolio
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - content.code.copy
+
+repo_url: https://github.com/miguelolmedomorell/docs-portfolio
+repo_name: miguelolmedomorell/docs-as-code-portfolio
+edit_uri: edit/main/docs/
+
+nav:
+  - Home: index.md
+  - Technical documentation:
+    - What is the ASD-STE100 Simplified Technical English (STE)?: technical-documentation/asd-ste100.md
+    - How to choose the right documentation platform: technical-documentation/doc-platform.md
+    - Why your team needs a Technical Writer: technical-documentation/tech-writer.md
+    - Markdown guide: technical-documentation/markdown-guide.md
+  - Academic essays & conferences: academic.md
+  - Translations: translations.md
+  - Press & media: press-media.md
