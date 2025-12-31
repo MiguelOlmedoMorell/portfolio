@@ -51,13 +51,15 @@ If you want to embed a blockquote within a blockquote, use >>.
 
 ## 4. Lists
 
-You can organize items into ordered, unordered, and task lists.
+You can organize items into ordered and unordered lists.
+
+> <span style="color:darkgreen">**Info:** You can nest any type of list within another one.
 
 ### 4.1. Ordered lists
 
 To create an ordered list, add line items with numbers followed by periods.
 
-> <span style="color:orangered">**❗Note:** The numbers don’t have to be in numerical order, as Markdown will automatically input them in the correct sequence, but the list should start with the number one.
+> <span style="color:orangered">❗ **Note:** The numbers don’t have to be in numerical order, as Markdown will automatically input them in the correct sequence, but the list should start with the number one.
 
 `1. First line`<br>
 `1. Second line`<br>
@@ -81,15 +83,13 @@ To create a nested list, type two spaces before the dash (`-`). To create a nest
 
 Example:
 
-`- Item 1`<br>
-`  - Item 1.1`<br>
-`      - Item 1.1.1`<br>
-`        - Item 1.1.1.1`<br>
-`- Item 2`<br>
+    - Item 1<br>
+      - Item 1.1<br>
+          - Item 1.1.1<br>
+            - Item 1.1.1.1<br>
+    - Item 2<br>
 
 > <span style="color:darkorange">💡 **Tip:** If you need to start an unordered list item with a number followed by a period, you can use a backslash (`\`) to avoid creating an ordered list.
-
-> <span style="color:darkgreen">** Info:** You can nest any type of list within another one.
 
 ---
 
@@ -99,33 +99,33 @@ To add a table, use three or more hyphens (`---`) to create each column’s head
 
 **Input:**
 
-    | Syntax      | Description |
+    | Syntax | Description |
     | ----------- | ----------- |
-    | Header      | Title       |
-    | Paragraph   | Text        |
+    | Header | Title |
+    | Paragraph | Text |
 
 **Output:**
 
-| Syntax      | Description |
+| Syntax | Description |
 | ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
+| Header | Title |
+| Paragraph | Text |
 
 You can align text in the columns to the left, right, or center by adding a colon (`:`) to the left, right, or on both side of the hyphens within the header row.
 
 **Input:**
 
-    | Syntax      | Description | Test Text     |
-    | :---        |    :----:   |          ---: |
-    | Header      | Title       | Here's this   |
-    | Paragraph   | Text        | And more      |
+    | Syntax | Description | Test Text |
+    | :--- | :----: | ---: |
+    | Header | Title | Here's this |
+    | Paragraph | Text | And more |
 
 **Output:**
 
-| Syntax      | Description | Test Text     |
-| :---        |    :----:   |          ---: |
-| Header      | Title       | Here's this   |
-| Paragraph   | Text        | And more      |
+| Syntax | Description | Test Text |
+| :--- | :----: | ---: |
+| Header | Title | Here's this |
+| Paragraph | Text | And more |
 
 ---
 
@@ -147,7 +147,7 @@ If you want the link to **open in a different tab**, you can use HTML code:
 
 | **Input** | **Output** |
 | ----------- | ----------- |
-| `<a href="Link" target="_blank">Text that will be displayed</a>`| <a href="Link" target="_blank">Text that will be displayed</a>|<a href="Link" target="_blank">Text that will be displayed</a>| <a href="Link" target="_blank">Text that will be displayed</a>|
+| `<a href="Link" target="_blank">Text that will be displayed</a>`| <a href="Link" target="_blank">Text that will be displayed</a>|
 
 To quickly turn a URL or email address into a link, enclose it in angle brackets.
 
@@ -155,8 +155,7 @@ To quickly turn a URL or email address into a link, enclose it in angle brackets
 | ----------- | ----------- |
 | `<example@example.com>`| <example@example.com>|
 
-
-> <span style="color:orangered">**❗Note:** If you are having trouble with spaces in the middle of a URL, try to URL encode any spaces with `%20`. For parenthesis, try to URL encode the opening parenthesis (`(`) with `%28` and the closing parenthesis (`)`) with `%29`.
+> <span style="color:orangered">❗ **Note:** If you are having trouble with spaces in the middle of a URL, try to URL encode any spaces with `%20`. For parenthesis, try to URL encode the opening parenthesis (`(`) with `%28` and the closing parenthesis (`)`) with `%29`.
 
 ---
 
@@ -231,7 +230,6 @@ To bold text, add two asterisks (`**`) before and after a word or phrase.
 | ----------- | ----------- |
 | `**Bold**`| **Bold**|
 
-
 ### 11.2. Italic
 
 To italicize text, add one asterisk (`*`) before and after a word or phrase.
@@ -239,7 +237,6 @@ To italicize text, add one asterisk (`*`) before and after a word or phrase.
 | **Input** | **Output** |
 | ----------- | ----------- |
 | `*Italic*`| *Italic*|
-
 
 ### 11.3. Bold and italic
 
