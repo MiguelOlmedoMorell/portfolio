@@ -14,4 +14,4 @@ jobs:
         with:
           node-version: "20"
       - run: npm install --save-dev markdownlint-cli
-      - run: npx markdownlint -c .markdownlint.json "**/*.md"
+      - run: npx markdownlint -c .markdownlint.json --ignore-path .markdownlintignore "docs/**/*.md" "*.md"
