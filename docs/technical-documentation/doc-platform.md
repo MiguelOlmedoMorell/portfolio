@@ -37,7 +37,7 @@ When choosing a documentation platform, focus on these factors:
 
 #### Pros
 
-**✅ User permissions**
+✅ **User permissions**
 
 Confluence offers granular access control, including:
 
@@ -48,48 +48,48 @@ Confluence offers granular access control, including:
 
 This setup gives teams strong control over access and editing rights.
 
-**✅ Integration**
+✅ **Integration**
 
 Confluence integrates tightly with Atlassian tools such as Jira, Trello, and Bitbucket, and supports 100+ apps, including Microsoft, Google, Zoom, and Salesforce tools.
 
-**✅ Templates**
+✅ **Templates**
 
 Confluence provides 100+ ready-made templates, and space admins can create custom templates for their teams.
 
-**✅ Offline export**
+✅ **Offline export**
 
 You can export:
 
 - Pages to PDF and Word
 - Knowledge bases to PDF, CSV, and HTML
 
-**✅ Content structure**
+✅ **Content structure**
 
 Confluence supports page hierarchies and nested content, plus archiving to reduce clutter and keep outdated material out of sight.
 
-**✅ Versatility & flexibility**
+✅ **Versatility & flexibility**
 
 Confluence offers the widest range of features, including databases, whiteboards, labels, excerpts, macros, and automation tools such as Atlassian Intelligence.
 
-**✅ File storage**
+✅ **File storage**
 
 Confluence Premium offers unlimited storage and version history for attachments.
 
-**✅ Global recognition**
+✅ **Global recognition**
 
 Confluence is widely used worldwide, with over 59,000 companies using it. [Source](https://theirstack.com/en/technology/confluence).
 
 #### Cons
 
-**❌ Cost**
+❌ **Cost**
 
 Confluence costs about $12 per user per month, and advanced features may require paid plugins.
 
-**❌ Learning curve**
+❌ **Learning curve**
 
 New users often need training before they feel comfortable using the platform.
 
-**❌ Formatting issues**
+❌ **Formatting issues**
 
 Copy-paste and export features can cause formatting problems that require manual fixes.
 
@@ -105,52 +105,52 @@ Copy-paste and export features can cause formatting problems that require manual
 
 #### Pros
 
-**✅ User permissions**
+✅ **User permissions**
 
 SharePoint provides strong access controls, including custom permissions for teams and projects.
 
-**✅ Integration**
+✅ **Integration**
 
 SharePoint works seamlessly with Microsoft 365 tools, including Word, Excel, PowerPoint, and OneNote.
 
-**✅ Templates**
+✅ **Templates**
 
 Teams can create site templates with reusable layouts and components.
 
-**✅ Offline export**
+✅ **Offline export**
 
 Because SharePoint relies on Microsoft Office tools, exporting content preserves formatting.
 
-**✅ Content structure**
+✅ **Content structure**
 
 SharePoint offers a traditional folder system, similar to Windows Explorer.
 
-**✅ Cost**
+✅ **Cost**
 
 SharePoint is included in most Microsoft 365 enterprise plans.
 
-**✅ File storage**
+✅ **File storage**
 
 Storage scales with licenses, includes version history, and supports large libraries.
 
-**✅ Global recognition**
+✅ **Global recognition**
 
 Over 53,000 companies use SharePoint worldwide. [Source](https://theirstack.com/en/technology/microsoft-sharepoint).
 
 #### Cons
 
-**❌ Limited flexibility**
+❌ **Limited flexibility**
 
 SharePoint relies heavily on external tools and technical setup, which can limit adaptability.
 
-**❌ Poor search experience**
+❌ **Poor search experience**
 Content often becomes hard to find due to folder isolation and weak search results.
 
-**❌ Usability challenges**
+❌ **Usability challenges**
 
 SharePoint is less intuitive, requires admin effort, and depends on familiarity with multiple Microsoft tools. According to a 2016 study, two-thirds of organizations using SharePoint reported low employee adoption due to its difficulty in use and understanding. [Source](https://www.colligo.com/media/document/Colligo-Gimmal-IW-SharePoint-Impact-2016.pdf).
 
-**❌ Folder structure**
+❌ **Folder structure**
 
 You cannot archive content directly. Teams must move old documents to separate sites.
 
@@ -166,57 +166,57 @@ You cannot archive content directly. Teams must move old documents to separate s
 
 #### Pros
 
-**✅ Loop components**
+✅ **Loop components**
 
 Loop components sync content across Microsoft apps, allowing real-time collaboration.
 
-**✅ Microsoft Copilot**
+✅ **Microsoft Copilot**
 
 Copilot helps summarize content, generate text, and brainstorm ideas.
 
-**✅ User permissions**
+✅ **User permissions**
 
 You can control access at the page and component level.
 
-**✅ Integration**
+✅ **Integration**
 
 Loop integrates natively with Microsoft 365 tools.
 
-**✅ Templates**
+✅ **Templates**
 
 Microsoft provides 24 templates, with support for custom ones.
 
-**✅ Ease of use**
+✅ **Ease of use**
 
 Loop is the easiest platform to learn, especially for small teams.
 
-**✅ Cost**
+✅ **Cost**
 
-Loop is included in several Microsoft 365 plans. Check Loop’s pricing [here](https://www.microsoft.com/en-us/microsoft-365/business/compare-all-microsoft-365-business-products?&activetab=tab:primaryr2).
+Loop is included in several Microsoft 365 plans. [Check Loop’s pricing](https://www.microsoft.com/en-us/microsoft-365/business/compare-all-microsoft-365-business-products?&activetab=tab:primaryr2).
 
-**✅ File Storage**
+✅ **File Storage**
 
 Loop pages and files count towards Microsoft storage quota of 1 TB plus 10 GB per license purchased. Additional storage has to be purchased.
 
 #### Cons
 
-**❌ Limited maturity**
+❌ **Limited maturity**
 
 Loop is still evolving, with fewer features than its competitors.
 
-**❌ Offline export**
+❌ **Offline export**
 
 You can only export to PDF, and formatting quality is limited.
 
-**❌ Content structure**
+❌ **Content structure**
 
 Loop supports limited nesting, with no folders or archiving.
 
-**❌ Limited search**
+❌ **Limited search**
 
 Search capabilities remain basic.
 
-**❌ Low adoption**
+❌ **Low adoption**
 
 Because Loop is new, usage remains limited, and adoption data is scarce.
 

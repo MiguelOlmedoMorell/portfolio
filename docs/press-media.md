@@ -2,7 +2,7 @@
 
 ## Articles
 
-### Video games
+### Video games (articles)
 
 - "[Análisis de Octopath Traveler 0, un cambio de dirección en la saga](https://as.com/meristation/analisis/analisis-de-octopath-traveler-0-para-nintendo-switch-2-un-cambio-de-direccion-en-la-saga-f202512-n/)". Meristation, December 2025.
 
@@ -94,7 +94,7 @@
 
 - “[[Análisis] Elli (Nintendo Switch)](http://nintenderos.com/2019/03/analisis-elli/). Nintenderos, March 2019.
 
-- “[La toma de decisiones en ](https://www.hyperhype.es/toma-decisiones-octopath-traveler/)[Octopath Traveler](https://www.hyperhype.es/toma-decisiones-octopath-traveler/)". HyperHype, November 2018.
+- “[La toma de decisiones en Octopath Traveler](https://www.hyperhype.es/toma-decisiones-octopath-traveler/)[Octopath Traveler](https://www.hyperhype.es/toma-decisiones-octopath-traveler/)". HyperHype, November 2018.
 
 - “[Majora’s Mask: El juego de las mil tramas](https://web.archive.org/web/20190325235906/http://www.presura.es/2018/10/17/majoras-mask-mil-tramas/)". Presura, October 2018.
 
@@ -152,7 +152,7 @@
 
 ## News & Reviews
 
-### Video games
+### Video games (news)
 
 - “[Ventas semanales en Japón de Nintendo Switch (20-26 de julio)](https://nintenduo.com/ventas-semanales-en-japon-de-nintendo-switch-20-26-de-julio/)". Nintendúo, July 2020.
 

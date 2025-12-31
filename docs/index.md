@@ -27,7 +27,7 @@ I hold the following certifications:
 
 ---
 
-# Recommendations
+## Recommendations
 
 > “Miguel is an outstanding professional with a remarkable ability to lead and execute high-impact projects. He single-handedly drove a critical documentation project for one of our most important clients, defining the strategy and setting clear guidelines to ensure long-term usability. Beyond his technical expertise, he stands out for his exceptional soft skills, collaborative mindset, and strong commitment to team success. Without a doubt, he is someone any team would be lucky to have.”
 >

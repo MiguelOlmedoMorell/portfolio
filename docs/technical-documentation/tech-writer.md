@@ -113,7 +113,7 @@ The investment pays for itself.
 
 ---
 
-# Interested in Technical Writing?
+## Interested in Technical Writing?
 
 If the tasks and standards described here caught your attention, Technical Writing may be worth exploring. Below is a list of resources to help you get started.
 

@@ -6,12 +6,12 @@ To create a heading, type number signs (`#`) in front of a word or phrase. The n
 
 > <span style="color:orangered">**⚠ Warning:** Always put a space between the number signs and the heading name.
 
-```# Header 1```<br>
-```## Header 2```<br>
-```### Header 3```<br>
-```#### Header 4```<br>
-```##### Header 5```<br>
-```###### Header 6```<br>
+`# Header 1`<br>
+`## Header 2`<br>
+`### Header 3`<br>
+`#### Header 4`<br>
+`##### Header 5`<br>
+`###### Header 6`<br>
 
 ---
 
@@ -29,7 +29,7 @@ To create a separator, type three dashes (`-`) on a separate line. Use it to sep
 
 To create a blockquote, add a `>` in front of a paragraph. Use it to emphasize important information, like warnings, notes, tips...
 
-```> Blockquote```
+`> Blockquote`
 
 Examples:
 
@@ -37,15 +37,15 @@ Examples:
 
 If you want the blockquote to contain multiple paragraphs, add a `>` on the blank lines between the paragraphs.
 
-```> Paragraph 1```<br>
-```>```<br>
-```> Paragraph 2```<br>
+`> Paragraph 1`<br>
+`>`<br>
+`> Paragraph 2`<br>
 
 If you want to embed a blockquote within a blockquote, use >>.
 
-```> Main paragraph```<br>
-```>```<br>
-```>> Embedded paragraph```<br>
+`> Main paragraph`<br>
+`>`<br>
+`>> Embedded paragraph`<br>
 
 ---
 
@@ -59,23 +59,23 @@ To create an ordered list, add line items with numbers followed by periods.
 
 > <span style="color:orangered">**❗Note:** The numbers don’t have to be in numerical order, as Markdown will automatically input them in the correct sequence, but the list should start with the number one.
 
-```1. First line```<br>
-```1. Second line```<br>
-```1. Third line```<br>
+`1. First line`<br>
+`1. Second line`<br>
+`1. Third line`<br>
 
 To create a nested list, type an additional number after the period.
 
-```1. First line```<br>
-```1.1. First sub-line```<br>
-```1.2 Second sub-line```<br>
+`1. First line`<br>
+`1.1. First sub-line`<br>
+`1.2 Second sub-line`<br>
 
 ### 4.2. Unordered lists
 
 To create an unordered list, add dashes (`-`), in front of the line items.
 
-```- First line```<br>
-```- Second line```<br>
-```- Third line```<br>
+`- First line`<br>
+`- Second line`<br>
+`- Third line`<br>
 
 To create a nested list, type two spaces before the dash (`-`). To create a nested list within a nested list, add two more spaces, and so on.
 
@@ -88,18 +88,6 @@ Example:
 `- Item 2`<br>
 
 > <span style="color:darkorange">💡 **Tip:** If you need to start an unordered list item with a number followed by a period, you can use a backslash (`\`) to avoid creating an ordered list.
-
-### 4.3 Task lists
-
-To create a task list, add this text in front of the line items:
-
-- [ ]
-
-```- [ ]```
-
-When a task is completed, mark it by writing `X` inside the brackets.
-
-```- [X]```
 
 > <span style="color:darkgreen">** Info:** You can nest any type of list within another one.
 
@@ -147,30 +135,25 @@ To create a link, enclose the link text in brackets and then follow it immediate
 
 | **Input** | **Output** |
 | ----------- | ----------- |
-| ```[Text that will be displayed](Link)```| [Text that will be displayed](Link)|
-
+| `[Text that will be displayed](Link)`| [Text that will be displayed](Link)|
 
 If you want to add a **tooltip** that will appear when the user hovers over the text, add a space and quotation marks after the link:
 
 | **Input** | **Output** |
 | ----------- | ----------- |
-| ```[Text that will be displayed](Link "Tooltip")```| [Text that will be displayed](Link "Tooltip")|
-
-
+| `[Text that will be displayed](Link "Tooltip")`| [Text that will be displayed](Link "Tooltip")|
 
 If you want the link to **open in a different tab**, you can use HTML code:
 
 | **Input** | **Output** |
 | ----------- | ----------- |
-| ```<a href="Link" target="_blank">Text that will be displayed</a>```| <a href="Link" target="_blank">Text that will be displayed</a>|<a href="Link" target="_blank">Text that will be displayed</a>```| <a href="Link" target="_blank">Text that will be displayed</a>|
-
+| `<a href="Link" target="_blank">Text that will be displayed</a>`| <a href="Link" target="_blank">Text that will be displayed</a>|<a href="Link" target="_blank">Text that will be displayed</a>| <a href="Link" target="_blank">Text that will be displayed</a>|
 
 To quickly turn a URL or email address into a link, enclose it in angle brackets.
 
 | **Input** | **Output** |
 | ----------- | ----------- |
-| ```<example@example.com>```| <example@example.com>|
-
+| `<example@example.com>`| <example@example.com>|
 
 
 > <span style="color:orangered">**❗Note:** If you are having trouble with spaces in the middle of a URL, try to URL encode any spaces with `%20`. For parenthesis, try to URL encode the opening parenthesis (`(`) with `%28` and the closing parenthesis (`)`) with `%29`.
@@ -181,16 +164,15 @@ To quickly turn a URL or email address into a link, enclose it in angle brackets
 
 To add an image, add an exclamation mark (`!`), followed by alt text in brackets, and the path or URL to the image asset in parentheses.
 
-
-```![Alt text](Image path)```
+`![Alt text](Image path)`
 
 To **add a link** to an image, enclose the Markdown for the image in brackets, and then add the link in parentheses.
 
-```[![Alt text](Image path)](Link)```
+`[![Alt text](Image path)](Link)`
 
 If you want to **resize an image**, you can use HTML code:
 
-```<img src="image.png" width="200" height="100">```
+`<img src="image.png" width="200" height="100">`
 
 ---
 
@@ -247,7 +229,7 @@ To bold text, add two asterisks (`**`) before and after a word or phrase.
 
 | **Input** | **Output** |
 | ----------- | ----------- |
-| ```**Bold**```| **Bold**|
+| `**Bold**`| **Bold**|
 
 
 ### 11.2. Italic
@@ -256,7 +238,7 @@ To italicize text, add one asterisk (`*`) before and after a word or phrase.
 
 | **Input** | **Output** |
 | ----------- | ----------- |
-| ```*Italic*```| *Italic*|
+| `*Italic*`| *Italic*|
 
 
 ### 11.3. Bold and italic
@@ -265,7 +247,7 @@ To emphasize text with bold and italics at the same time, add three asterisks (`
 
 | **Input** | **Output** |
 | ----------- | ----------- |
-| ```***Bold***``` | ***Bold and italic***|
+| `***Bold***` | ***Bold and italic***|
 
 ### 11.4. Strikethrough
 
@@ -273,7 +255,7 @@ To cross text out, add two tildes (`~~`) before and after a word or phrase.
 
 | **Input** | **Output** |
 | ----------- | ----------- |
-| ```~~Strikethrough~~``` | ~~Strikethrough~~|
+| `~~Strikethrough~~` | ~~Strikethrough~~|
 
 ### 11.5. Color
 
