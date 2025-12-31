@@ -57,7 +57,7 @@ The controlled dictionary includes **simple, familiar words**. Each word has **o
 
 The dictionary also lists **unapproved words**, along with **approved alternatives**. For example, writers should use “primary” instead of “main”, and “before” instead of “previous”. Writers must use verbs only in the forms shown in the dictionary.
 
-> ✅ Technical writers can use company- or project-specific terms. These are known as **technical names** and **technical verbs**.</span>
+Technical writers can use company- or project-specific terms. These are known as **technical names** and **technical verbs**.</span>
 
 > ⚠️ **STE and the Microsoft Writing Style Guide can conflict** at times. For example, STE rule 4.2 discourages contractions, while the Microsoft guide [recommends them](https://learn.microsoft.com/en-us/style-guide/word-choice/use-contractions) for a friendly tone. In these cases, writers must balance compliance requirements with context and audience needs.
 

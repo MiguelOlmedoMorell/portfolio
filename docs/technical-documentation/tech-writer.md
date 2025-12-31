@@ -49,6 +49,7 @@ The more complex the topic, the greater the responsibility. Writing deserves the
 Every profession follows standards, and documentation is no exception. To work well, it must be clear, consistent, and user-focused. That’s why Technical Writers rely on style guides, specifications, and industry standards.
 
 Common style guides include:
+
 - [Microsoft Writing Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome/)
 - [Apple Style Guide](https://support.apple.com/es-es/guide/applestyleguide/welcome/web)
 - [Google developer documentation style guide](https://developers.google.com/style)

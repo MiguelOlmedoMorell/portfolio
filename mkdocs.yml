@@ -9,8 +9,8 @@ theme:
     - toc.integrate
     - content.code.copy
 
-repo_url: https://github.com/miguelolmedomorell/docs-portfolio
-repo_name: miguelolmedomorell/docs-as-code-portfolio
+repo_url: https://github.com/miguelolmedomorell/git branch -M mainportfolio
+repo_name: miguelolmedomorell/portfolio
 edit_uri: edit/main/docs/
 
 nav:

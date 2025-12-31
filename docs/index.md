@@ -1,6 +1,6 @@
-# Pleased to meet you!
+# Pleased to meet you
 
-<div style="text-align: center" class="circle"><img src="https://momorell.wordpress.com/wp-content/uploads/2025/02/miguel-olmedo-morell-foto-de-perfil-1.jpeg" style="box-shadow: 0px 0px 10px #888;" width="300" height="300"/></div>
+<div style="text-align: center" class="circle"><img src="https://momorell.wordpress.com/wp-content/uploads/2025/02/miguel-olmedo-morell-foto-de-perfil-1.jpeg" style="box-shadow: 0px 0px 10px #888;" width="300" height="300" alt="Profile photo"/></div>
 
 I’m Miguel Olmedo Morell, a Technical Writer with **12 years of experience writing, proofreading and translating** for companies, magazines, universities and professors.
 

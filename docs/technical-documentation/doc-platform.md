@@ -27,7 +27,7 @@ When choosing a documentation platform, focus on these factors:
 
 ## Documentation platforms: pros & cons
 
-<img src="https://momorell.wordpress.com/wp-content/uploads/2024/12/atlassian-confluence-1.webp" width="600" height="auto">
+<img src="https://momorell.wordpress.com/wp-content/uploads/2024/12/atlassian-confluence-1.webp" width="600" height="auto" alt="Confluence">
 
 ### Confluence
 
@@ -35,7 +35,7 @@ When choosing a documentation platform, focus on these factors:
 >
 > — [Get Started with Confluence – A Beginner’s Guide](https://www.atlassian.com/software/confluence/resources/guides/get-started/overview#about-confluence)
 
-#### Pros
+#### Pros (Confluence)
 
 ✅ **User permissions**
 
@@ -79,7 +79,7 @@ Confluence Premium offers unlimited storage and version history for attachments.
 
 Confluence is widely used worldwide, with over 59,000 companies using it. [Source](https://theirstack.com/en/technology/confluence).
 
-#### Cons
+#### Cons (Confluence)
 
 ❌ **Cost**
 
@@ -95,7 +95,7 @@ Copy-paste and export features can cause formatting problems that require manual
 
 ---
 
-<img src="https://momorell.wordpress.com/wp-content/uploads/2025/01/sharepoint.jpeg" width="600" height="auto">
+<img src="https://momorell.wordpress.com/wp-content/uploads/2025/01/sharepoint.jpeg" width="600" height="auto" alt="SharePoint">
 
 ### SharePoint
 
@@ -103,7 +103,7 @@ Copy-paste and export features can cause formatting problems that require manual
 >
 > — [What is SharePoint? – Microsoft Support](https://support.microsoft.com/en-us/office/what-is-sharepoint-97b915e6-651b-43b2-827d-fb25777f446f)
 
-#### Pros
+#### Pros (SharePoint)
 
 ✅ **User permissions**
 
@@ -137,7 +137,7 @@ Storage scales with licenses, includes version history, and supports large libra
 
 Over 53,000 companies use SharePoint worldwide. [Source](https://theirstack.com/en/technology/microsoft-sharepoint).
 
-#### Cons
+#### Cons (SharePoint)
 
 ❌ **Limited flexibility**
 
@@ -156,7 +156,7 @@ You cannot archive content directly. Teams must move old documents to separate s
 
 ---
 
-<img src="https://momorell.wordpress.com/wp-content/uploads/2025/01/microsoft-loop.jpg" width="600" height="auto">
+<img src="https://momorell.wordpress.com/wp-content/uploads/2025/01/microsoft-loop.jpg" width="600" height="auto" alt="Loop">
 
 ### Microsoft Loop
 
@@ -164,7 +164,7 @@ You cannot archive content directly. Teams must move old documents to separate s
 >
 > — [Get started with Microsoft Loop – Microsoft Support](https://support.microsoft.com/en-us/office/get-started-with-microsoft-loop-9f4d8d4f-dfc6-4518-9ef6-069408c21f0c)
 
-#### Pros
+#### Pros (Loop)
 
 ✅ **Loop components**
 
@@ -198,7 +198,7 @@ Loop is included in several Microsoft 365 plans. [Check Loop’s pricing](https:
 
 Loop pages and files count towards Microsoft storage quota of 1 TB plus 10 GB per license purchased. Additional storage has to be purchased.
 
-#### Cons
+#### Cons (Loop)
 
 ❌ **Limited maturity**
 
@@ -224,7 +224,7 @@ Because Loop is new, usage remains limited, and adoption data is scarce.
 
 ## Comparison
 
-![](https://momorell.wordpress.com/wp-content/uploads/2025/01/comparison-1.png?w=2048)
+<img src="https://momorell.wordpress.com/wp-content/uploads/2025/01/comparison-1.png?w=2048" alt="Comparison">
 
 - **Confluence** offers the most power and flexibility, at a higher cost.
 - **SharePoint** provides strong structure and Microsoft integration, but requires significant setup and maintenance.
