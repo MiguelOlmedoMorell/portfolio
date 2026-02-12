@@ -3,7 +3,7 @@
 !!! info "About this sample"
     This tutorial explains how to implement the “Add Product” endpoint in a fictional e-commerce API. It is aimed at backend developers who must integrate new product creation functionality into their services.
 
-    Some specific blocks and snippets are tailored specifically for junior developers who may need extra context.
+    Some admonitions are specifically tailored for junior developers who may need extra context.
 
     The guide follows a codelab-style format and assumes a starter project that readers progress from an initial state to a final solution.
 
@@ -18,7 +18,7 @@ The goal is not only to make the endpoint work, but **to implement it in a way t
 By the end of this tutorial, **you will have a fully functional `POST /products` endpoint** that accepts JSON, validates input automatically, stores a new product, and returns a proper REST response.
 
 !!! tip "About the tips in this tutorial"
-    Throughout the tutorial, you’ll see highlighted tips like this. These provide additional explanations for concepts that may be new or unfamiliar.
+    Throughout the tutorial, you’ll see highlighted tip and info boxes like this. These provide additional explanations for concepts that may be new or unfamiliar.
 
     **If you’re a junior developer**, these tips can be helpful in your learning journey.
     **If you’re a senior developer**, feel free to skip them.
@@ -50,6 +50,9 @@ By the end of this tutorial, **you will have a fully functional `POST /products`
 **Create a dedicated request object** that represents the JSON body clients will send when creating a product, and **enforce validation rules** so invalid data is rejected automatically before it reaches your business logic.
 
 Instead of accepting a raw `Product` entity in the controller, **you will introduce a DTO (Data Transfer Object) called `CreateProductRequest`**. This keeps your API contract focused only on the fields required for creation and prevents accidental exposure or misuse of internal model properties (such as IDs).
+
+!!! info "Why use a DTO?"
+    A DTO creates a clear boundary between external input and the internal domain model. This improves maintainability and flexibility, since changes to the database structure do not automatically affect the public API.
 
 ### 2.2 Process
 
@@ -238,6 +241,9 @@ import com.example.tutorial.dto.CreateProductRequest;
     }
 ```
 
+!!! info "Why use a service layer?"
+    Separating business logic into a service layer keeps controllers lightweight and focused on HTTP concerns. This improves maintainability, testability, and reuse, since the same service methods can be called from different controllers or background processes without duplicating logic.
+
 This method:
 
 - Builds a new `Product` using the values from the request DTO so you do not have to set the `id` manually — the repository layer is responsible for generating it.
@@ -357,6 +363,9 @@ You will also add focused tests that confirm the API returns the expected HTTP s
     - `@RequestBody` binds the request JSON payload to the DTO parameter.
     - `HttpStatus` provides the status code that our API endpoint will return on success.
 
+!!! info "Why validate input here?"
+    Performing validation at the controller boundary ensures that invalid data is rejected as early as possible. This keeps service and persistence layers focused on business logic instead of defensive checks, and it guarantees consistent HTTP responses (`400 Bad Request`) for malformed requests.
+
 /2. **Replace `// TODO` with the `createProduct` endpoint method**:
 
 ```java
@@ -393,6 +402,9 @@ public ResponseEntity<Product> createProduct(
 
     **The Swagger / OpenAPI annotations (`@Operation`, `@ApiResponses`) generate API documentation and describe the endpoint’s behavior, expected inputs, and possible responses.**  
     This will be available at `http://localhost:8080/swagger-ui.html`.
+
+!!! info "Why use ResponseEntity?"
+    `ResponseEntity` provides explicit control over both the HTTP status code and the response body. This makes the endpoint’s behavior clearer and more flexible, especially when different outcomes (such as `201 Created`, `400 Bad Request`, or `404 Not Found`) must be represented consistently.
 
 After this, add controller tests for `POST /products`:
 
@@ -453,7 +465,10 @@ private ObjectMapper objectMapper;
     }
 ```
 
-!!! tip "What this test verifies"
+!!! info "Why mock the service in controller tests?"
+    Mocking the service layer isolates the controller’s HTTP behavior from business logic and persistence concerns. This makes tests faster and more reliable, ensuring they verify request handling, status codes, and JSON structure rather than database or service implementation details.
+
+!!! tip "What does this verify?"
     This test checks that the controller correctly handles a JSON request, returns a `201 Created` response with the expected JSON fields, and uses a mocked service so only the controller’s HTTP behavior—not the service logic—is being verified.
 
 /4. Add the “invalid request returns 400” test method:
@@ -733,7 +748,27 @@ class ProductControllerTest {
 
 </details>
 
-## 5. Summary
+## 5. Troubleshooting
+
+If the endpoint does not behave as expected, check the following:
+
+!!! warning "400 Bad Request returned unexpectedly"
+    - Ensure all required DTO fields are present in the JSON body.
+    - Verify that validation annotations (for example `@NotNull`, `@Positive`) match the data you are sending.
+
+!!! warning "Application fails to start"
+    - Confirm that the server port (default `8080`) is not already in use.
+    - Check the console logs for dependency or configuration errors.
+
+!!! warning "Request reaches controller but nothing is saved"
+    - Verify that the service method is being called and that the repository or storage logic is correctly configured.
+    - Ensure the `@Service` and `@Autowired` / constructor injection annotations are present.
+
+!!! warning "Tests failing"
+    - Confirm that the expected status codes (`201`, `400`) match the assertions.
+    - Make sure mocked services return the expected objects.
+
+## 6. Summary
 
 !!! success "Congratulations!"
     In this tutorial, you have added a `POST` endpoint to create new products in a Spring Boot application. You learned how to update the controller (`ProductController`) with a new `@PostMapping` method that handles JSON input and produces a `201 Created` response. You also implemented the corresponding service logic in `ProductService` to build and save a `Product` from a `CreateProductRequest` DTO. Additionally, you saw how validation annotations in the DTO automatically enforce rules, returning a `400 Bad Request` for invalid data. Finally, you verified the functionality with unit tests (and optionally with a real HTTP request).
