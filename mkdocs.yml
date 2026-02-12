@@ -16,6 +16,7 @@ edit_uri: edit/main/docs/
 nav:
   - Home: index.md
   - Technical documentation:
+    - SAMPLE - Building a product creation POST endpoint in Spring Boot: technical-documentation/sample-tutorial.md
     - What is the ASD-STE100 Simplified Technical English (STE)?: technical-documentation/asd-ste100.md
     - How to choose the right documentation platform: technical-documentation/doc-platform.md
     - Why your team needs a Technical Writer: technical-documentation/tech-writer.md
