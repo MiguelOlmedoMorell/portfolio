@@ -1,6 +1,6 @@
 # Miguel Olmedo Morell's portfolio
 
-<div style="text-align: center" class="circle"><img src="https://momorell.wordpress.com/wp-content/uploads/2025/02/miguel-olmedo-morell-foto-de-perfil-1.jpeg" style="box-shadow: 0px 0px 10px #888;" width="275" height="275" alt="Profile photo"/></div>
+<div style="text-align: center" class="circle"><img src="https://momorell.wordpress.com/wp-content/uploads/2025/02/miguel-olmedo-morell-foto-de-perfil-1.jpeg" style="box-shadow: 0px 0px 10px #888;" width="225" height="225" alt="Profile photo"/></div>
 
 Pleased to meet you!
 
