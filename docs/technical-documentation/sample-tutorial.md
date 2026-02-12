@@ -57,7 +57,7 @@ Instead of accepting a raw `Product` entity in the controller, **you will introd
 
 In this file, create the class `CreateProductRequest` inside the ⁠`com.example.tutorial`⁠ package:
 
-1. **Set the package** we will use for DTO classes:
+/1. **Set the package** we will use for DTO classes:
 
 ```java
 package com.example.tutorial.dto;
@@ -71,7 +71,7 @@ public class CreateProductRequest {
 }
 ```
 
-2. **Import Lombok annotations** to reduce boilerplate code and add Lombok class-level annotations:
+/2. **Import Lombok annotations** to reduce boilerplate code and add Lombok class-level annotations:
 
 ```java
 import lombok.AllArgsConstructor;
@@ -91,7 +91,7 @@ import lombok.NoArgsConstructor;
     - `@NoArgsConstructor` – Adds an empty constructor (no inputs).
     - `@AllArgsConstructor` – Adds a constructor that takes every field as an input.
 
-3. Inside the class, **declare the product properties**:
+/3. Inside the class, **declare the product properties**:
 
 ```java
 public class CreateProductRequest {
@@ -103,7 +103,7 @@ public class CreateProductRequest {
 } ⁠
 ```
 
-4. **Add Jakarta Validation annotations** to express constraints in the product properties:
+/4. **Add Jakarta Validation annotations** to express constraints in the product properties:
 
 4.1 **Add the following imports** at the top beneath the package:
 
@@ -210,13 +210,13 @@ public class CreateProductRequest {
 
 ### 3.2 Process
 
-1. Open `src/main/java/com/example/tutorial/service/ProductService.java` and add the DTO import at the top of the file:
+/1. Open `src/main/java/com/example/tutorial/service/ProductService.java` and add the DTO import at the top of the file:
 
 ```java
 import com.example.tutorial.dto.CreateProductRequest;
 ```
 
-2. Add the `createProduct` method inside the `ProductService` class:
+/2. Add the `createProduct` method inside the `ProductService` class:
 
 ```java
     /**
@@ -338,7 +338,7 @@ You will also add focused tests that confirm the API returns the expected HTTP s
 
 ### 4.2 Process
 
-1. Open `⁠src/main/java/com/example/tutorial/controller/ProductController.java` and **add the required imports** at the top of the file:
+/1. Open `⁠src/main/java/com/example/tutorial/controller/ProductController.java` and **add the required imports** at the top of the file:
 
 ```java
     import com.example.tutorial.dto.CreateProductRequest;
@@ -357,7 +357,7 @@ You will also add focused tests that confirm the API returns the expected HTTP s
     - `@RequestBody` binds the request JSON payload to the DTO parameter.
     - `HttpStatus` provides the status code that our API endpoint will return on success.
 
-2. **Replace `// TODO` with the `createProduct` endpoint method**:
+/2. **Replace `// TODO` with the `createProduct` endpoint method**:
 
 ```java
 /**
@@ -396,7 +396,7 @@ public ResponseEntity<Product> createProduct(
 
 After this, add controller tests for `POST /products`:
 
-1. Open `src/test/java/com/example/tutorial/controller/ProductControllerTest.java` and add the required imports at the top of the file:
+/1. Open `src/test/java/com/example/tutorial/controller/ProductControllerTest.java` and add the required imports at the top of the file:
 
 ```java
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -411,14 +411,14 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 - `ArgumentMatchers.any` matches any value of a given type when mocking method calls.
 - `post` (`MockMvcRequestBuilders`) builds HTTP `POST` requests in tests.
 
-2. Inside the test class, add `ObjectMapper`:
+/2. Inside the test class, add `ObjectMapper`:
 
 ```java
 @Autowired
 private ObjectMapper objectMapper;
 ```
 
-3. Add the “valid request returns 201” test method:
+/3. Add the “valid request returns 201” test method:
 
 ```java
     @Test
@@ -456,7 +456,7 @@ private ObjectMapper objectMapper;
 !!! tip "What this test verifies"
     This test checks that the controller correctly handles a JSON request, returns a `201 Created` response with the expected JSON fields, and uses a mocked service so only the controller’s HTTP behavior—not the service logic—is being verified.
 
-4. Add the “invalid request returns 400” test method:
+/4. Add the “invalid request returns 400” test method:
 
 ```java
     @Test
@@ -735,6 +735,7 @@ class ProductControllerTest {
 
 ## 5. Summary
 
-In this tutorial, you have added a `POST` endpoint to create new products in a Spring Boot application. You learned how to update the controller (`ProductController`) with a new `@PostMapping` method that handles JSON input and produces a `201 Created` response. You also implemented the corresponding service logic in `ProductService` to build and save a `Product` from a `CreateProductRequest` DTO. Additionally, you saw how validation annotations in the DTO automatically enforce rules, returning a `400 Bad Request` for invalid data. Finally, you verified the functionality with unit tests (and optionally with a real HTTP request).
-
-With this new endpoint in place, the API now supports Create operations (in addition to the existing Read operations), moving closer to full CRUD capabilities. You can apply these same patterns to add other endpoints (for updating or deleting products) and be confident in writing clean, well-structured Spring Boot controllers and services.
+!!! success "Congratulations!
+    In this tutorial, you have added a `POST` endpoint to create new products in a Spring Boot application. You learned how to update the controller (`ProductController`) with a new `@PostMapping` method that handles JSON input and produces a `201 Created` response. You also implemented the corresponding service logic in `ProductService` to build and save a `Product` from a `CreateProductRequest` DTO. Additionally, you saw how validation annotations in the DTO automatically enforce rules, returning a `400 Bad Request` for invalid data. Finally, you verified the functionality with unit tests (and optionally with a real HTTP request).
+    
+    With this new endpoint in place, the API now supports Create operations (in addition to the existing Read operations), moving closer to full CRUD capabilities. You can apply these same patterns to add other endpoints (for updating or deleting products) and be confident in writing clean, well-structured Spring Boot controllers and services.
