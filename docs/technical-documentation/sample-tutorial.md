@@ -737,5 +737,5 @@ class ProductControllerTest {
 
 !!! success "Congratulations!
     In this tutorial, you have added a `POST` endpoint to create new products in a Spring Boot application. You learned how to update the controller (`ProductController`) with a new `@PostMapping` method that handles JSON input and produces a `201 Created` response. You also implemented the corresponding service logic in `ProductService` to build and save a `Product` from a `CreateProductRequest` DTO. Additionally, you saw how validation annotations in the DTO automatically enforce rules, returning a `400 Bad Request` for invalid data. Finally, you verified the functionality with unit tests (and optionally with a real HTTP request).
-    
+
     With this new endpoint in place, the API now supports Create operations (in addition to the existing Read operations), moving closer to full CRUD capabilities. You can apply these same patterns to add other endpoints (for updating or deleting products) and be confident in writing clean, well-structured Spring Boot controllers and services.
