@@ -60,7 +60,7 @@ Instead of accepting a raw `Product` entity in the controller, **you will introd
 
 In this file, create the class `CreateProductRequest` inside the ⁠`com.example.tutorial`⁠ package:
 
-/1. **Set the package** we will use for DTO classes:
+1 **Set the package** we will use for DTO classes:
 
 ```java
 package com.example.tutorial.dto;
@@ -74,7 +74,7 @@ public class CreateProductRequest {
 }
 ```
 
-/2. **Import Lombok annotations** to reduce boilerplate code and add Lombok class-level annotations:
+2 **Import Lombok annotations** to reduce boilerplate code and add Lombok class-level annotations:
 
 ```java
 import lombok.AllArgsConstructor;
@@ -94,7 +94,7 @@ import lombok.NoArgsConstructor;
     - `@NoArgsConstructor` – Adds an empty constructor (no inputs).
     - `@AllArgsConstructor` – Adds a constructor that takes every field as an input.
 
-/3. Inside the class, **declare the product properties**:
+3 Inside the class, **declare the product properties**:
 
 ```java
 public class CreateProductRequest {
@@ -106,7 +106,7 @@ public class CreateProductRequest {
 } ⁠
 ```
 
-/4. **Add Jakarta Validation annotations** to express constraints in the product properties:
+4 **Add Jakarta Validation annotations** to express constraints in the product properties:
 
 4.1 **Add the following imports** at the top beneath the package:
 
@@ -213,13 +213,13 @@ public class CreateProductRequest {
 
 ### 3.2 Process
 
-/1. Open `src/main/java/com/example/tutorial/service/ProductService.java` and add the DTO import at the top of the file:
+1 Open `src/main/java/com/example/tutorial/service/ProductService.java` and add the DTO import at the top of the file:
 
 ```java
 import com.example.tutorial.dto.CreateProductRequest;
 ```
 
-/2. Add the `createProduct` method inside the `ProductService` class:
+2 Add the `createProduct` method inside the `ProductService` class:
 
 ```java
     /**
@@ -344,7 +344,7 @@ You will also add focused tests that confirm the API returns the expected HTTP s
 
 ### 4.2 Process
 
-/1. Open `⁠src/main/java/com/example/tutorial/controller/ProductController.java` and **add the required imports** at the top of the file:
+1 Open `⁠src/main/java/com/example/tutorial/controller/ProductController.java` and **add the required imports** at the top of the file:
 
 ```java
     import com.example.tutorial.dto.CreateProductRequest;
@@ -366,7 +366,7 @@ You will also add focused tests that confirm the API returns the expected HTTP s
 !!! info "Why validate input here?"
     Performing validation at the controller boundary ensures that invalid data is rejected as early as possible. This keeps service and persistence layers focused on business logic instead of defensive checks, and it guarantees consistent HTTP responses (`400 Bad Request`) for malformed requests.
 
-/2. **Replace `// TODO` with the `createProduct` endpoint method**:
+2 **Replace `// TODO` with the `createProduct` endpoint method**:
 
 ```java
 /**
@@ -406,9 +406,45 @@ public ResponseEntity<Product> createProduct(
 !!! info "Why use ResponseEntity?"
     `ResponseEntity` provides explicit control over both the HTTP status code and the response body. This makes the endpoint’s behavior clearer and more flexible, especially when different outcomes (such as `201 Created`, `400 Bad Request`, or `404 Not Found`) must be represented consistently.
 
+<details>
+  <summary>Example request and response</summary>
+
+**Request**
+
+```http
+POST /products
+Content-Type: application/json
+
+{
+  "name": "Mechanical Keyboard",
+  "description": "RGB backlit keyboard",
+  "price": 89.99,
+  "category": "Accessories",
+  "stock": 15
+}
+```
+
+**Successful response**
+
+```http
+HTTP/1.1 201 Created
+Content-Type: application/json
+
+{
+  "id": "prod-123",
+  "name": "Mechanical Keyboard",
+  "description": "RGB backlit keyboard",
+  "price": 89.99,
+  "category": "Accessories",
+  "stock": 15
+}
+```
+
+</details>
+
 After this, add controller tests for `POST /products`:
 
-/1. Open `src/test/java/com/example/tutorial/controller/ProductControllerTest.java` and add the required imports at the top of the file:
+1 Open `src/test/java/com/example/tutorial/controller/ProductControllerTest.java` and add the required imports at the top of the file:
 
 ```java
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -423,14 +459,14 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 - `ArgumentMatchers.any` matches any value of a given type when mocking method calls.
 - `post` (`MockMvcRequestBuilders`) builds HTTP `POST` requests in tests.
 
-/2. Inside the test class, add `ObjectMapper`:
+2 Inside the test class, add `ObjectMapper`:
 
 ```java
 @Autowired
 private ObjectMapper objectMapper;
 ```
 
-/3. Add the “valid request returns 201” test method:
+3 Add the “valid request returns 201” test method:
 
 ```java
     @Test
@@ -471,7 +507,7 @@ private ObjectMapper objectMapper;
 !!! tip "What does this verify?"
     This test checks that the controller correctly handles a JSON request, returns a `201 Created` response with the expected JSON fields, and uses a mocked service so only the controller’s HTTP behavior—not the service logic—is being verified.
 
-/4. Add the “invalid request returns 400” test method:
+4 Add the “invalid request returns 400” test method:
 
 ```java
     @Test
