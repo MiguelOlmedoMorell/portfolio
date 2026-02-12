@@ -1,10 +1,11 @@
 # SAMPLE - Building a product creation POST endpoint in Spring Boot
 
-> This tutorial explains how to implement the “Add Product” endpoint in a fictional e-commerce API. It is aimed at backend developers who must integrate new product creation functionality into their services.
->
-> Some specific blocks and snippets are tailored specifically for junior developers who may need extra context.
->
-> The guide follows a codelab-style format and assumes a starter project that readers progress from an initial state to a final solution.
+!!! info "About this sample"
+    This tutorial explains how to implement the “Add Product” endpoint in a fictional e-commerce API. It is aimed at backend developers who must integrate new product creation functionality into their services.
+
+    Some specific blocks and snippets are tailored specifically for junior developers who may need extra context.
+
+    The guide follows a codelab-style format and assumes a starter project that readers progress from an initial state to a final solution.
 
 ## 1. Overview
 
@@ -19,7 +20,7 @@ By the end of this tutorial, **you will have a fully functional `POST /products`
 !!! tip "About the tips in this tutorial"
     Throughout the tutorial, you’ll see highlighted tips like this. These provide additional explanations for concepts that may be new or unfamiliar.
 
-    **If you’re a junior developer**, these tips can be helpful in your learning journey.  
+    **If you’re a junior developer**, these tips can be helpful in your learning journey.
     **If you’re a senior developer**, feel free to skip them.
 
 ### What you’ll learn
@@ -382,7 +383,7 @@ public ResponseEntity<Product> createProduct(
     **`@PostMapping` and `public ResponseEntity<Product> createProduct(...)` define the `POST` endpoint**  
     `@PostMapping` maps the method to `POST /products`, while `ResponseEntity<Product>` lets you control both the HTTP status code and the response body returned to the client.
 
-    **`@RequestBody CreateProductRequest request` and `@Valid` handle input and validation.**  
+    **`@RequestBody CreateProductRequest request` and `@Valid` handle input and validation.**
     `@RequestBody` converts incoming JSON into the `CreateProductRequest` DTO, which contains only the fields needed for creation.  
     `@Valid` activates the validation rules defined in the DTO. If the data is invalid, Spring automatically returns `400 Bad Request` and the method does not execute.
 
