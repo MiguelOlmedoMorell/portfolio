@@ -9,9 +9,17 @@ theme:
     - toc.integrate
     - content.code.copy
 
-repo_url: https://github.com/miguelolmedomorell/git branch -M mainportfolio
+repo_url: https://github.com/miguelolmedomorell/portfolio
 repo_name: miguelolmedomorell/portfolio
 edit_uri: edit/main/docs/
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+    - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
 
 nav:
   - Home: index.md

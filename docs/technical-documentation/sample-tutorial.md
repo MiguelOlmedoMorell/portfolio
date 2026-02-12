@@ -16,11 +16,11 @@ The goal is not only to make the endpoint work, but **to implement it in a way t
 
 By the end of this tutorial, **you will have a fully functional `POST /products` endpoint** that accepts JSON, validates input automatically, stores a new product, and returns a proper REST response.
 
-> [!TIP]
->
-> Throughout the tutorial, you’ll see highlighted tips like this. These provide additional explanations for concepts that may be new or unfamiliar.
->
-> **If you’re a junior developer**, these tips can be helpful in your learning journey. **If you’re a senior developer**, feel free to skip them.
+!!! tip "About the tips in this tutorial"
+    Throughout the tutorial, you’ll see highlighted tips like this. These provide additional explanations for concepts that may be new or unfamiliar.
+
+    **If you’re a junior developer**, these tips can be helpful in your learning journey.  
+    **If you’re a senior developer**, feel free to skip them.
 
 ### What you’ll learn
 
@@ -38,8 +38,8 @@ By the end of this tutorial, **you will have a fully functional `POST /products`
 
 ### Prerequisites
 
-- Java 17 or later
-- Maven
+- Java 21.0.10
+- Apache Maven 3.9.12
 - An IDE such as VS Code, IntelliJ IDEA, or Eclipse
 
 ## 2. Define accepted fields
@@ -84,12 +84,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 ```
 
-> [!TIP]
->
-> - `@Data` – Automatically creates common methods like getters, setters, and toString so you don’t have to write them.
-> - `@Builder` – Lets you create an object step by step in a clear, readable way.
-> - `@NoArgsConstructor`– Adds an empty constructor (no inputs).
-> - `@AllArgsConstructor` – Adds a constructor that takes every field as an input.
+!!! tip "Common Lombok annotations"
+    - `@Data` – Automatically creates common methods like getters, setters, and `toString` so you don’t have to write them.
+    - `@Builder` – Lets you create an object step by step in a clear, readable way.
+    - `@NoArgsConstructor` – Adds an empty constructor (no inputs).
+    - `@AllArgsConstructor` – Adds a constructor that takes every field as an input.
 
 3. Inside the class, **declare the product properties**:
 
@@ -136,13 +135,12 @@ import jakarta.validation.constraints.Size;
     private Integer stock;
 ```
 
-> [!TIP]
->
-> - `@NotBlank`: Value must be a non-empty string containing at least one non-whitespace character.
-> - `@Size`: Value length or collection size must fall within the defined min/max limits.
-> - `@NotNull`: Value cannot be null.
-> - `@Positive`: Numeric value must be greater than 0.
-> - `@PositiveOrZero`: Numeric value must be 0 or greater (not negative).
+!!! tip "Common validation annotations"
+    - `@NotBlank`: Value must be a non-empty string containing at least one non-whitespace character.
+    - `@Size`: Value length or collection size must fall within the defined min/max limits.
+    - `@NotNull`: Value cannot be null.
+    - `@Positive`: Numeric value must be greater than 0.
+    - `@PositiveOrZero`: Numeric value must be 0 or greater (not negative).
 
 ### 2.3 Expected outcome
 
@@ -351,13 +349,12 @@ You will also add focused tests that confirm the API returns the expected HTTP s
     import org.springframework.web.bind.annotation.RequestBody;
 ```
 
-> [!TIP]
->
-> - `CreateProductRequest` is the type Spring will deserialize incoming JSON into.
-> - `@Valid` tells Spring to run validation rules defined on the DTO.
-> - `@PostMapping` maps the method to HTTP POST requests. When a request is made to `http://localhost:8080/products` using the `POST` method, it will execute the contents of `createProduct(...)`.
-> - `@RequestBody` binds the request JSON payload to the DTO parameter.
-> - `HttpStatus` provides the status code that our API endpoint will return on success.
+!!! tip "Controller annotations explained"
+    - `CreateProductRequest` is the type Spring will deserialize incoming JSON into.
+    - `@Valid` tells Spring to run validation rules defined on the DTO.
+    - `@PostMapping` maps the method to HTTP POST requests. When a request is made to `http://localhost:8080/products` using the `POST` method, it will execute the contents of `createProduct(...)`.
+    - `@RequestBody` binds the request JSON payload to the DTO parameter.
+    - `HttpStatus` provides the status code that our API endpoint will return on success.
 
 2. **Replace `// TODO` with the `createProduct` endpoint method**:
 
@@ -381,21 +378,20 @@ public ResponseEntity<Product> createProduct(
 }
 ```
 
-> [!TIP]
->
-> **`@PostMapping` and `public ResponseEntity<Product> createProduct(...)` define the `POST` endpoint**
-> `@PostMapping` maps the method to `POST /products`, while `ResponseEntity<Product>` lets you control both the HTTP status code and the response body returned to the client.
->
-> **`@RequestBody CreateProductRequest request` and `@Valid` handle input and validation.**
-> `@RequestBody` converts incoming JSON into the `CreateProductRequest` DTO, which contains only the fields needed for creation.
-> `@Valid` activates the validation rules defined in the DTO. If the data is invalid, Spring automatically returns `400 Bad Request` and the method does not execute.
->
-> **`productService.createProduct(request)` and `ResponseEntity.status(HttpStatus.CREATED).body(createdProduct)` handle business delegation and the HTTP response.**
-> The controller delegates creation logic to the service layer so it stays focused on HTTP concerns, while the service manages business and storage logic.
-> `HttpStatus.CREATED (201)` indicates a new resource was successfully created, and `.body(createdProduct)` returns the newly created `Product` to the client.
->
-> **The Swagger / OpenAPI annotations (`@Operation`, `@ApiResponses`) generate API documentation and describe the endpoint’s behavior, expected inputs, and possible responses.**
-> This will be available at `http://localhost:8080/swagger-ui.html`.
+!!! tip "How the POST controller works"
+    **`@PostMapping` and `public ResponseEntity<Product> createProduct(...)` define the `POST` endpoint**  
+    `@PostMapping` maps the method to `POST /products`, while `ResponseEntity<Product>` lets you control both the HTTP status code and the response body returned to the client.
+
+    **`@RequestBody CreateProductRequest request` and `@Valid` handle input and validation.**  
+    `@RequestBody` converts incoming JSON into the `CreateProductRequest` DTO, which contains only the fields needed for creation.  
+    `@Valid` activates the validation rules defined in the DTO. If the data is invalid, Spring automatically returns `400 Bad Request` and the method does not execute.
+
+    **`productService.createProduct(request)` and `ResponseEntity.status(HttpStatus.CREATED).body(createdProduct)` handle business delegation and the HTTP response.**  
+    The controller delegates creation logic to the service layer so it stays focused on HTTP concerns, while the service manages business and storage logic.  
+    `HttpStatus.CREATED (201)` indicates a new resource was successfully created, and `.body(createdProduct)` returns the newly created `Product` to the client.
+
+    **The Swagger / OpenAPI annotations (`@Operation`, `@ApiResponses`) generate API documentation and describe the endpoint’s behavior, expected inputs, and possible responses.**  
+    This will be available at `http://localhost:8080/swagger-ui.html`.
 
 After this, add controller tests for `POST /products`:
 
@@ -456,9 +452,8 @@ private ObjectMapper objectMapper;
     }
 ```
 
-> [!TIP]
->
-> This test checks that the controller correctly handles a JSON request, returns a `201 Created` response with the expected JSON fields, and uses a mocked service so only the controller’s HTTP behavior—not the service logic—is being verified.
+!!! tip "What this test verifies"
+    This test checks that the controller correctly handles a JSON request, returns a `201 Created` response with the expected JSON fields, and uses a mocked service so only the controller’s HTTP behavior—not the service logic—is being verified.
 
 4. Add the “invalid request returns 400” test method:
 
@@ -478,9 +473,8 @@ private ObjectMapper objectMapper;
     }
 ```
 
-> [!TIP]
->
-> This test verifies that request validation is enforced by the controller, returning a `400 Bad Request` for invalid input without needing to mock the service since validation occurs before the service is invoked.
+!!! tip "Validation test purpose"
+    This test verifies that request validation is enforced by the controller, returning a `400 Bad Request` for invalid input without needing to mock the service since validation occurs before the service is invoked.
 
 ### 4.3 Expected outcome
 
