@@ -148,11 +148,10 @@ import jakarta.validation.constraints.Size;
 
 ### 2.3 Expected outcome
 
-After completing this step:
-
-- There is a new `CreateProductRequest` class under the `dto` package.
-- Validation annotations are in place.
-- You now have a clear, safe structure for incoming product-creation data.
+!!! success "After completing this step:"
+    - There is a new `CreateProductRequest` class under the `dto` package.
+    - Validation annotations are in place.
+    - You now have a clear, safe structure for incoming product-creation data.
 
 By the end of this step, `CreateProductRequest.java` should look like this:
 
@@ -252,9 +251,8 @@ This method:
 
 ### 3.3 Expected outcome
 
-After completing this step:
-
-- `ProductService` contains a working `createProduct` method.
+!!! success "After completing this step:"
+    - `ProductService` contains a working `createProduct` method.
 
 By the end of this step, `ProductService.java` should look like this:
 
@@ -530,16 +528,15 @@ private ObjectMapper objectMapper;
 
 ### 4.3 Expected outcome
 
-After completing this step:
-
-- Your controller compiles with a new `createProduct(...)` method.
-- `POST /products` is fully functional and accepts JSON.
-- Valid requests will result in:
-  - `201 Created`.
-  - A JSON `Product` response.
-- Invalid requests will result in:
-  - `400 Bad Request` automatically due to `@Valid`.
-- Your test suite covers the new endpoint’s success and failure paths, helping prevent regressions later.
+!!! success "After completing this step:"
+    - Your controller compiles with a new `createProduct(...)` method.
+    - `POST /products` is fully functional and accepts JSON.
+    - Valid requests will result in:
+      - `201 Created`.
+      - A JSON `Product` response.
+    - Invalid requests will result in:
+      - `400 Bad Request` automatically due to `@Valid`.
+    - Your test suite covers the new endpoint’s success and failure paths, helping prevent regressions later.
 
 By the end of this step, `ProductController.java` and `ProductControllerTest.java` files should look like this:
 
