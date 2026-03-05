@@ -1,9 +1,9 @@
 # Markdown guide
 
 !!! info "Introduction"
-  Markdown is a lightweight markup language used to format text using a plain-text syntax. It is widely used in documentation, README files, forums, and static websites. Some site generators, such as MkDocs (the framework used to create this website), are designed to create sites from Markdown.
-
-  This guide covers the most common Markdown features and includes examples of their syntax and rendered output. Please note this is not a comprehensive guide.
+    Markdown is a lightweight markup language used to format text using a plain-text syntax. It is widely used in documentation, README files, forums, and static websites. Some site generators, such as MkDocs (the framework used to create this website), are designed to create sites from Markdown.
+  
+    This guide covers the most common Markdown features and includes examples of their syntax and rendered output. Please note this is not a comprehensive guide.
 
 !!! tip "Short on time? [Click here for a quick Markdown cheat sheet](#13-cheat-sheet)."
 
@@ -110,8 +110,6 @@ Example:
 
 You can organize items into ordered and unordered lists.
 
-!!! info "You can nest any type of list within another one."
-
 ### 4.1. Ordered lists
 
 To create an ordered list, add line items with numbers followed by periods.
@@ -128,8 +126,8 @@ To create a nested list, add two spaces before the sub-items.
 
 ```markdown
 1. First item
-  1. First sub-item
-  2. Second sub-item
+  1.1. First sub-item
+  1.2. Second sub-item
 ```
 
 ### 4.2. Unordered lists
@@ -294,14 +292,6 @@ To display lines of code within Markdown, add` ``` `on the lines before and afte
 </html>
 ```
 
-Example:
-
-<html>
-  <head>
-    <title>Test</title>
-  </head>
-</html>
-
 ### 8.3. Indented code blocks
 
 You can get the same result as fenced code blocks adding four spaces before each line of code.
@@ -309,9 +299,6 @@ You can get the same result as fenced code blocks adding four spaces before each
 ```markdown
     Code example
 ```
-
-Example:
-    Code example
 
 ---
 
@@ -349,7 +336,7 @@ If your site supports HTML code, you can add a collapsible section using HTML co
     <details>
       <summary>Click to expand</summary>
     
-      You can add any kind of text here.
+      You can add any text here.
     </details>
 ```
 
@@ -358,7 +345,7 @@ Example:
 <details>
 <summary>Click to expand</summary>
 
-You can add any kind of text here.
+You can add any text here.
 </details>
 
 ---
@@ -397,23 +384,6 @@ Alerts users to serious risks that require immediate attention.
 [!CAUTION]
 Warns about possible negative results of an action.
 ```
-
-Example:
-
-[!NOTE]
-Information users should keep in mind, even when skimming.
-
-[!TIP]
-Optional guidance to help users work more effectively.
-
-[!IMPORTANT]
-Key information users need to complete a task successfully.
-
-[!WARNING]
-Alerts users to serious risks that require immediate attention.
-
-[!CAUTION]
-Warns about possible negative results of an action.
 
 ## 13. Cheat sheet
 
@@ -536,7 +506,7 @@ Quick reference for the most common Markdown features:
 <details>
   <summary>Click to expand</summary>
 
-  Hidden content
+  You can add any text here.
 </details>
 
 ## 13.12. HTML inside Markdown
