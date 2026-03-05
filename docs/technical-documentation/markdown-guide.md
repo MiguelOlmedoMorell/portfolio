@@ -1,9 +1,9 @@
 # Markdown guide
 
 !!! info "Introduction"
-    Markdown is a lightweight markup language used to format text using a plain-text syntax. It is widely used in documentation, README files, forums, and static websites. Some site generators, such as MkDocs (the framework used to create this website), are designed to create sites from Markdown.
-    
-    This guide covers the most common Markdown features and includes examples of their syntax and rendered output. Please note this is not a comprehensive guide.
+  Markdown is a lightweight markup language used to format text using a plain-text syntax. It is widely used in documentation, README files, forums, and static websites. Some site generators, such as MkDocs (the framework used to create this website), are designed to create sites from Markdown.
+
+  This guide covers the most common Markdown features and includes examples of their syntax and rendered output. Please note this is not a comprehensive guide.
 
 !!! tip "Short on time? [Click here for a quick Markdown cheat sheet](#13-cheat-sheet)."
 
@@ -90,7 +90,6 @@ Example:
 > Paragraph 1
 >
 > Paragraph 2
-
 
 To nest a blockquote within a blockquote, use >>.
 
@@ -235,10 +234,10 @@ To add a table, use three or more hyphens (`---`) to create each column’s head
 
 **Input:**
 
-    | Syntax | Description |
-    | ----------- | ----------- |
-    | Heading | Title |
-    | Paragraph | Text |
+  | Syntax | Description |
+  | ----------- | ----------- |
+  | Heading | Title |
+  | Paragraph | Text |
 
 **Output:**
 
@@ -251,10 +250,10 @@ You can align text in the columns to the left, right, or center by adding a colo
 
 **Input:**
 
-    | Syntax | Description | Test Text |
-    | :--- | :----: | ---: |
-    | Heading | Title | Here's this |
-    | Paragraph | Text | And more |
+  | Syntax | Description | Test Text |
+  | :--- | :----: | ---: |
+  | Heading | Title | Here's this |
+  | Paragraph | Text | And more |
 
 **Output:**
 
@@ -517,7 +516,7 @@ Quick reference for the most common Markdown features:
 
 ## 13.8.3. Indented code block
 
-    Code example
+  Code example
 
 ## 13.9. Escaping characters
 
@@ -525,7 +524,6 @@ Quick reference for the most common Markdown features:
 | ------------ | --------- |
 | `\# Heading` | # Heading |
 | `\*text\*`   | *text*    |
-| `\_text\_`   | _text_*_    |
 
 ## 13.10. Separators
 
