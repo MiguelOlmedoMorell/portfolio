@@ -1,27 +1,72 @@
 # Markdown guide
 
-## 1. Headers
+!!! info "Introduction"
+    Markdown is a lightweight markup language used to format text using a plain-text syntax. It is widely used in documentation, README files, forums, and static websites. Some site generators, such as MkDocs (the framework used to create this website), are designed to create sites from Markdown.
+    
+    This guide covers the most common Markdown features and includes examples of their syntax and rendered output. Please note this is not a comprehensive guide.
+
+!!! tip "Short on time? [Click here for a quick Markdown cheat sheet](#13-cheat-sheet)."
+
+## 1. Headings
 
 To create a heading, type number signs (`#`) in front of a word or phrase. The number of signs you use corresponds to the heading level.
 
-> <span style="color:orangered">**⚠ Warning:** Always put a space between the number signs and the heading name.
+!!! warning "Always put a space between the number signs and the heading name."
 
-`# Header 1`<br>
-`## Header 2`<br>
-`### Header 3`<br>
-`#### Header 4`<br>
-`##### Header 5`<br>
-`###### Header 6`<br>
+```markdown
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+```
 
 ---
 
-## 2. Separators
+## 2. Text formatting
 
-To create a separator, type three dashes (`-`) on a separate line. Use it to separate differentiated sections.
+### 2.1. Bold
 
-`---`
+To make text bold, add two asterisks (`**`) before and after a word or phrase.
 
-> <span style="color:orangered">**⚠ Warning:** Always enter blank lines before and after separators.
+| **Input** | **Output** |
+| ----------- | ----------- |
+| `**Bold**`| **Bold**|
+
+### 2.2. Italic
+
+To italicize text, add one asterisk (`*`) before and after a word or phrase.
+
+| **Input** | **Output** |
+| ----------- | ----------- |
+| `*Italic*`| *Italic*|
+
+### 2.3. Bold and italic
+
+To emphasize text with bold and italics at the same time, add three asterisks (`***`) before and after a word or phrase.
+
+| **Input** | **Output** |
+| ----------- | ----------- |
+| `***Bold***` | ***Bold and italic***|
+
+### 2.4. Strikethrough
+
+To cross text out, add two tildes (`~~`) before and after a word or phrase.
+
+| **Input** | **Output** |
+| ----------- | ----------- |
+| `~~Strikethrough~~` | ~~Strikethrough~~|
+
+### 2.5. Color
+
+If your site supports HTML code, you can add color using the following HTML tags:
+
+| **Input** | **Output** |
+| ----------- | ----------- |
+| `<span style="color:red">This text is red.</span>`| <span style="color:red">This text is red.</span>|
+
+- [Here is a list of colors you can use](https://htmlcolorcodes.com/color-names/)
 
 ---
 
@@ -31,21 +76,34 @@ To create a blockquote, add a `>` in front of a paragraph. Use it to emphasize i
 
 `> Blockquote`
 
-Examples:
-
-> <span style="color:orangered">**⚠ Warning:** Always put blank lines before and after blockquotes.
+!!! warning "Always put blank lines before and after blockquotes."
 
 If you want the blockquote to contain multiple paragraphs, add a `>` on the blank lines between the paragraphs.
 
-`> Paragraph 1`<br>
-`>`<br>
-`> Paragraph 2`<br>
+```markdown
+> Paragraph 1
+>
+> Paragraph 2
+```
 
-If you want to embed a blockquote within a blockquote, use >>.
+Example:
+> Paragraph 1
+>
+> Paragraph 2
 
-`> Main paragraph`<br>
-`>`<br>
-`>> Embedded paragraph`<br>
+
+To nest a blockquote within a blockquote, use >>.
+
+```markdown
+> Main paragraph
+>
+>> Nested blockquote
+```
+
+Example:
+> Main paragraph
+>
+>> Nested blockquote
 
 ---
 
@@ -53,83 +111,79 @@ If you want to embed a blockquote within a blockquote, use >>.
 
 You can organize items into ordered and unordered lists.
 
-> <span style="color:darkgreen">**Info:** You can nest any type of list within another one.
+!!! info "You can nest any type of list within another one."
 
 ### 4.1. Ordered lists
 
 To create an ordered list, add line items with numbers followed by periods.
 
-> <span style="color:orangered">❗ **Note:** The numbers don’t have to be in numerical order, as Markdown will automatically input them in the correct sequence, but the list should start with the number one.
+!!! tip "The numbers don’t have to be in numerical order, as Markdown will automatically input them in the correct sequence, but the list should start with the number one."
 
-`1. First line`<br>
-`1. Second line`<br>
-`1. Third line`<br>
+```markdown
+1. First item
+1. Second item
+1. Third item
+```
 
-To create a nested list, type an additional number after the period.
+To create a nested list, add two spaces before the sub-items.
 
-`1. First line`<br>
-`1.1. First sub-line`<br>
-`1.2 Second sub-line`<br>
+```markdown
+1. First item
+  1. First sub-item
+  2. Second sub-item
+```
 
 ### 4.2. Unordered lists
 
 To create an unordered list, add dashes (`-`), in front of the line items.
 
-`- First line`<br>
-`- Second line`<br>
-`- Third line`<br>
+```markdown
+- First item
+- Second item
+- Third item
+```
 
 To create a nested list, type two spaces before the dash (`-`). To create a nested list within a nested list, add two more spaces, and so on.
 
 Example:
 
-    - Item 1<br>
-      - Item 1.1<br>
-          - Item 1.1.1<br>
-            - Item 1.1.1.1<br>
-    - Item 2<br>
+```markdown
+  - Item 1
+    - Item 1.1
+        - Item 1.1.1
+          - Item 1.1.1.1
+    - Item 2
+```
 
-> <span style="color:darkorange">💡 **Tip:** If you need to start an unordered list item with a number followed by a period, you can use a backslash (`\`) to avoid creating an ordered list.
+!!! tip "If you need to start an unordered list item with a number followed by a period, you can use a backslash (`\`) to avoid creating an ordered list."
 
----
+### 4.3. Task lists
 
-### 5. Tables
+To create a task list, add `- [ ]` before incomplete tasks and `- [x]` before completed tasks.
 
-To add a table, use three or more hyphens (`---`) to create each column’s header, and use pipes (`|`) to separate each column. For compatibility, you should also add a pipe on either end of the row.
+Example:
 
-**Input:**
+```markdown
+- [x] Completed task
+- [ ] Incomplete task
+```
 
-    | Syntax | Description |
-    | ----------- | ----------- |
-    | Header | Title |
-    | Paragraph | Text |
+### 4.4. Mixed lists
 
-**Output:**
+You can merge elements from the previous lists to create mixed lists.
 
-| Syntax | Description |
-| ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text |
+Example:
 
-You can align text in the columns to the left, right, or center by adding a colon (`:`) to the left, right, or on both side of the hyphens within the header row.
-
-**Input:**
-
-    | Syntax | Description | Test Text |
-    | :--- | :----: | ---: |
-    | Header | Title | Here's this |
-    | Paragraph | Text | And more |
-
-**Output:**
-
-| Syntax | Description | Test Text |
-| :--- | :----: | ---: |
-| Header | Title | Here's this |
-| Paragraph | Text | And more |
+```markdown
+1. Item
+2. Item
+   - Sub item
+   - Sub item
+```
 
 ---
 
-## 6. Links
+## 5. Links
 
 To create a link, enclose the link text in brackets and then follow it immediately with the URL in parentheses.
 
@@ -149,17 +203,17 @@ If you want the link to **open in a different tab**, you can use HTML code:
 | ----------- | ----------- |
 | `<a href="Link" target="_blank">Text that will be displayed</a>`| <a href="Link" target="_blank">Text that will be displayed</a>|
 
-To quickly turn a URL or email address into a link, enclose it in angle brackets.
+To automatically convert a URL or email address into a link, enclose it in angle brackets.
 
 | **Input** | **Output** |
 | ----------- | ----------- |
 | `<example@example.com>`| <example@example.com>|
 
-> <span style="color:orangered">❗ **Note:** If you are having trouble with spaces in the middle of a URL, try to URL encode any spaces with `%20`. For parenthesis, try to URL encode the opening parenthesis (`(`) with `%28` and the closing parenthesis (`)`) with `%29`.
+!!! tip "If you are having trouble with spaces in the middle of a URL, try to URL encode any spaces with `%20`. For parenthesis, try to URL encode the opening parenthesis (`(`) with `%28` and the closing parenthesis (`)`) with `%29`."
 
 ---
 
-## 7. Images
+## 6. Images
 
 To add an image, add an exclamation mark (`!`), followed by alt text in brackets, and the path or URL to the image asset in parentheses.
 
@@ -175,40 +229,130 @@ If you want to **resize an image**, you can use HTML code:
 
 ---
 
-## 8. Displaying Markdown characters
+## 7. Tables
 
-If there is a character you want to include, but Markdown interprets it as code, add a backslash (`\`) in front of the character.
+To add a table, use three or more hyphens (`---`) to create each column’s header, and use pipes (`|`) to separate each column. For compatibility, you should also add a pipe on either end of the row.
 
-`/# This is not a header`
+**Input:**
 
-If you wish to display text that Markdown considers as code, you can use **plain text** add an accent (``` ` ```) before and after it.
+    | Syntax | Description |
+    | ----------- | ----------- |
+    | Heading | Title |
+    | Paragraph | Text |
+
+**Output:**
+
+| Syntax | Description |
+| ----------- | ----------- |
+| Heading | Title |
+| Paragraph | Text |
+
+You can align text in the columns to the left, right, or center by adding a colon (`:`) to the left, right, or on both side of the hyphens within the heading row.
+
+**Input:**
+
+    | Syntax | Description | Test Text |
+    | :--- | :----: | ---: |
+    | Heading | Title | Here's this |
+    | Paragraph | Text | And more |
+
+**Output:**
+
+| Syntax | Description | Test Text |
+| :--- | :----: | ---: |
+| Heading | Title | Here's this |
+| Paragraph | Text | And more |
+
+---
+
+## 8. Code blocks
+
+### 8.1. Inline code
+
+To highlight code within text, add backticks (``` ` ```) around the code.
+
+```markdown
+Use the `git commit` command.
+```
+
+Example:
+
+Use the `git commit` command.
+
+### 8.2. Fenced code blocks
+
+To display lines of code within Markdown, add` ``` `on the lines before and after the code.
+
+!!! tip "Syntax highlighting"
+    If you want to highlight the syntax specific to the displayed code, add the name after the /``` on the first line.
+    Example: ```java
+
+```html
+<html>
+  <head>
+    <title>Test</title>
+  </head>
+</html>
+```
+
+Example:
+
+<html>
+  <head>
+    <title>Test</title>
+  </head>
+</html>
+
+### 8.3. Indented code blocks
+
+You can get the same result as fenced code blocks adding four spaces before each line of code.
+
+```markdown
+    Code example
+```
+
+Example:
+    Code example
+
+---
+
+## 9. Escaping characters
+
+To add a character that Markdown interprets as code, add a backslash (`\`) in front of the character.
+
+`\# This is not a heading`
+
+Example:
+
+\# This is not a heading
+
+If you wish to display Markdown code as plain text, add backticks (``` ` ```) around the code.
 
 `# This **text** is unaffected by ~~coding~~.`
 
 ---
 
-## 9. Code blocks
+## 10. Separators
 
-If you want to display lines of code within Markdown, type four spaces before them. Any spaces you introduce after that will count as normal spaces.
+To create a separator, type three dashes (`-`) on a separate line. Use it to separate differentiated sections.
 
-Example:
+`---`
 
-        <html>
-          <head>
-            <title>Test</title>
-          </head>
+!!! warning "Always enter blank lines before and after separators."
 
 ---
 
-## 10. Collapsible content
+## 11. Collapsible content (HTML)
 
-You can add a collapsible section using HTML code.
+If your site supports HTML code, you can add a collapsible section using HTML code.
 
+```html
     <details>
       <summary>Click to expand</summary>
     
       You can add any kind of text here.
     </details>
+```
 
 Example:
 
@@ -220,46 +364,187 @@ You can add any kind of text here.
 
 ---
 
-## 11. Formatting text
+## 12. GitHub features
 
-### 11.1. Bold
+Markdown is often used on GitHub. These are some features you can use in this framework.
 
-To bold text, add two asterisks (`**`) before and after a word or phrase.
+### 12.1. Footnotes
 
-| **Input** | **Output** |
+To add a footnote, follow this example:
+
+```markdown
+Here is a sentence with a footnote.[^1]
+
+[^1]: Footnote text.
+```
+
+### 12.2 Blockquotes
+
+Use the following examples for the type of content they describe:
+
+```markdown
+[!NOTE]
+Information users should keep in mind, even when skimming.
+
+[!TIP]
+Optional guidance to help users work more effectively.
+
+[!IMPORTANT]
+Key information users need to complete a task successfully.
+
+[!WARNING]
+Alerts users to serious risks that require immediate attention.
+
+[!CAUTION]
+Warns about possible negative results of an action.
+```
+
+Example:
+
+[!NOTE]
+Information users should keep in mind, even when skimming.
+
+[!TIP]
+Optional guidance to help users work more effectively.
+
+[!IMPORTANT]
+Key information users need to complete a task successfully.
+
+[!WARNING]
+Alerts users to serious risks that require immediate attention.
+
+[!CAUTION]
+Warns about possible negative results of an action.
+
+## 13. Cheat sheet
+
+Quick reference for the most common Markdown features:
+
+## 13.1. Headings
+
+| Element   | Markdown           |
+| --------- | ------------------ |
+| Heading 1 | `# Heading 1`      |
+| Heading 2 | `## Heading 2`     |
+| Heading 3 | `### Heading 3`    |
+| Heading 4 | `#### Heading 4`   |
+| Heading 5 | `##### Heading 5`  |
+| Heading 6 | `###### Heading 6` |
+
+## 13.2. Text formatting
+
+| Element       | Markdown     | Example    |
+| ------------- | ------------ | ---------- |
+| Bold          | `**text**`   | **text**   |
+| Italic        | `*text*`     | *text*     |
+| Bold + Italic | `***text***` | ***text*** |
+| Strikethrough | `~~text~~`   | ~~text~~   |
+| Inline code   | `` `code` `` | `code`     |
+
+## 13.3. Blockquotes
+
+| Element           | Markdown           |
+| ----------------- | ------------------ |
+| Blockquote        | `> Quote`          |
+| Nested blockquote | `> > Nested quote` |
+
+## 13.4. Lists
+
+## 13.4.1. Ordered lists
+
+| Markdown         |
+| ---------------- |
+| `1. First item`  |
+| `2. Second item` |
+| `3. Third item`  |
+
+## 13.4.2. Unordered lists
+
+| Markdown |
+| -------- |
+| `- Item` |
+| `- Item` |
+| `- Item` |
+
+## 13.4.3. Task lists
+
+| Markdown |
+| -------- |
+| `- [ ] Item` |
+| `- [x] Item` |
+| `- [ ] Item` |
+
+## 13.5. Links
+
+| Element           | Markdown                |
+| ----------------- | ----------------------- |
+| Basic link        | `[Text](URL)`           |
+| Link with tooltip | `[Text](URL "Tooltip")` |
+| Automatic link    | `<https://example.com>` |
+| Email link        | `<example@example.com>` |
+
+## 13.6. Images
+
+| Element      | Markdown                        |
+| ------------ | ------------------------------- |
+| Image        | `![Alt text](image.png)`        |
+| Linked image | `[![Alt text](image.png)](URL)` |
+
+## 13.7. Tables
+
+```markdown
+| Syntax | Description |
 | ----------- | ----------- |
-| `**Bold**`| **Bold**|
+| Heading | Title |
+| Paragraph | Text |
+```
 
-### 11.2. Italic
+## 13.8. Code blocks
 
-To italicize text, add one asterisk (`*`) before and after a word or phrase.
+## 13.8.1. Inline code
 
-| **Input** | **Output** |
-| ----------- | ----------- |
-| `*Italic*`| *Italic*|
+`code`
 
-### 11.3. Bold and italic
+## 13.8.2. Fenced code block
 
-To emphasize text with bold and italics at the same time, add three asterisks (`***`) before and after a word or phrase.
+```html
+<html>
+  <head>
+    <title>Example</title>
+  </head>
+</html>
+```
 
-| **Input** | **Output** |
-| ----------- | ----------- |
-| `***Bold***` | ***Bold and italic***|
+## 13.8.3. Indented code block
 
-### 11.4. Strikethrough
+    Code example
 
-To cross text out, add two tildes (`~~`) before and after a word or phrase.
+## 13.9. Escaping characters
 
-| **Input** | **Output** |
-| ----------- | ----------- |
-| `~~Strikethrough~~` | ~~Strikethrough~~|
+| Markdown     | Result    |
+| ------------ | --------- |
+| `\# Heading` | # Heading |
+| `\*text\*`   | *text*    |
+| `\_text\_`   | _text_*_    |
 
-### 11.5. Color
+## 13.10. Separators
 
-You can add color to a text by using HTML code.
+| Element         | Markdown |
+| --------------- | -------- |
+| Horizontal rule | `---`    |
 
-| **Input** | **Output** |
-| ----------- | ----------- |
-| `<span style="color:red">This text is red.</span>`| <span style="color:red">This text is red.</span>|
+## 13.11. Collapsible content (HTML)
 
-- [Here is a list of colors you can use](https://htmlcolorcodes.com/color-names/)
+<details>
+  <summary>Click to expand</summary>
+
+  Hidden content
+</details>
+
+## 13.12. HTML inside Markdown
+
+| Feature              | Example                                  |
+| -------------------- | ---------------------------------------- |
+| Text color           | `<span style="color:red">Text</span>`    |
+| Image resizing       | `<img src="image.png" width="200">`      |
+| Open link in new tab | `<a href="URL" target="_blank">Text</a>` |
