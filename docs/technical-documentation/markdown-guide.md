@@ -218,7 +218,7 @@ If you want to **resize an image**, you can use HTML code if your site supports 
 
 `<img src="image.png" width="200" height="100">`
 
-!!! tip Some site generators and code editor extensions allow you to directly copy and paste an image into the code.
+!!! tip "Some site generators and code editor extensions allow you to directly copy and paste an image into the code."
 
 ---
 
