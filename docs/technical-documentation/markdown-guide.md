@@ -118,17 +118,29 @@ To create an ordered list, add line items with numbers followed by periods.
 
 ```markdown
 1. First item
-1. Second item
-1. Third item
+2. Second item
+3. Third item
 ```
 
-To create a nested list, add two spaces before the sub-items.
+Example:
+
+1. First item
+1. Second item
+1. Third item
+
+To create a nested list, add four spaces before the sub-items.
 
 ```markdown
 1. First item
   1.1. First sub-item
   1.2. Second sub-item
 ```
+
+Example:
+
+1. First item
+    1. First sub-item
+    2. Second sub-item
 
 ### 4.2. Unordered lists
 
@@ -150,6 +162,14 @@ To create a nested list, type two spaces before the dash (`-`). To create a nest
     - Item 2
 ```
 
+Example:
+
+- Item 1
+    - Item 1.1
+        - Item 1.1.1
+            - Item 1.1.1
+- Item 2
+
 !!! tip "If you need to start an unordered list item with a number followed by a period, you can use a backslash (`\`) to avoid creating an ordered list."
 
 ### 4.3. Task lists
@@ -161,16 +181,28 @@ To create a task list, add `- [ ]` before incomplete tasks and `- [x]` before co
 - [ ] Incomplete task
 ```
 
+Example:
+
+- [x] Completed task
+- [ ] Incomplete task
+
 ### 4.4. Mixed lists
 
 You can merge elements from the previous lists to create mixed lists.
 
 ```markdown
 1. Item
+    - Sub item
+    - Sub item
 2. Item
-   - Sub item
-   - Sub item
 ```
+
+Example:
+
+1. Item
+    - Sub item
+    - Sub item
+2. Item
 
 ---
 
