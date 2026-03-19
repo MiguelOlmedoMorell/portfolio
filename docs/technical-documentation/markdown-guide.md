@@ -503,11 +503,13 @@ Quick reference for the most common Markdown features:
 
 ## 13.11. Collapsible content (HTML)
 
+```html
 <details>
   <summary>Click to expand</summary>
 
   You can add any text here.
 </details>
+```
 
 ## 13.12. HTML inside Markdown
 
