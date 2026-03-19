@@ -9,7 +9,7 @@
 
 ## 1. Headings
 
-To create a heading, type number signs (`#`) in front of a word or phrase. The number of signs you use corresponds to the heading level.
+To create a heading, type hash symbols (`#`) in front of a word or phrase. The amount of hash symbols you use corresponds to the heading level.
 
 !!! warning "Always put a space between the number signs and the heading name."
 
@@ -66,7 +66,7 @@ If your site supports HTML code, you can add color using the following HTML tags
 | ----------- | ----------- |
 | `<span style="color:red">This text is red.</span>`| <span style="color:red">This text is red.</span>|
 
-- [Here is a list of colors you can use](https://htmlcolorcodes.com/color-names/)
+- [Here is a list of HTML color names you can use](https://htmlcolorcodes.com/color-names/)
 
 ---
 
@@ -142,8 +142,6 @@ To create an unordered list, add dashes (`-`), in front of the line items.
 
 To create a nested list, type two spaces before the dash (`-`). To create a nested list within a nested list, add two more spaces, and so on.
 
-Example:
-
 ```markdown
   - Item 1
     - Item 1.1
@@ -158,8 +156,6 @@ Example:
 
 To create a task list, add `- [ ]` before incomplete tasks and `- [x]` before completed tasks.
 
-Example:
-
 ```markdown
 - [x] Completed task
 - [ ] Incomplete task
@@ -168,8 +164,6 @@ Example:
 ### 4.4. Mixed lists
 
 You can merge elements from the previous lists to create mixed lists.
-
-Example:
 
 ```markdown
 1. Item
@@ -182,19 +176,19 @@ Example:
 
 ## 5. Links
 
-To create a link, enclose the link text in brackets and then follow it immediately with the URL in parentheses.
+To create a link, enclose the link text in brackets and follow it with the URL in parentheses.
 
 | **Input** | **Output** |
 | ----------- | ----------- |
 | `[Text that will be displayed](Link)`| [Text that will be displayed](Link)|
 
-If you want to add a **tooltip** that will appear when the user hovers over the text, add a space and quotation marks after the link:
+To add a **tooltip** that will appear when you hover over the text, add a space and quotation marks after the link:
 
 | **Input** | **Output** |
 | ----------- | ----------- |
 | `[Text that will be displayed](Link "Tooltip")`| [Text that will be displayed](Link "Tooltip")|
 
-If you want the link to **open in a different tab**, you can use HTML code:
+If you want the link to **open in a different tab**, you can use HTML code if your site supports it:
 
 | **Input** | **Output** |
 | ----------- | ----------- |
@@ -206,7 +200,7 @@ To automatically convert a URL or email address into a link, enclose it in angle
 | ----------- | ----------- |
 | `<example@example.com>`| <example@example.com>|
 
-!!! tip "If you are having trouble with spaces in the middle of a URL, try to URL encode any spaces with `%20`. For parenthesis, try to URL encode the opening parenthesis (`(`) with `%28` and the closing parenthesis (`)`) with `%29`."
+!!! tip "If you have trouble with spaces in the middle of a URL, encode spaces with `%20`. For parenthesis, encode the opening parenthesis (`(`) with `%28` and the closing parenthesis (`)`) with `%29`."
 
 ---
 
@@ -220,9 +214,11 @@ To **add a link** to an image, enclose the Markdown for the image in brackets, a
 
 `[![Alt text](Image path)](Link)`
 
-If you want to **resize an image**, you can use HTML code:
+If you want to **resize an image**, you can use HTML code if your site supports it:
 
 `<img src="image.png" width="200" height="100">`
+
+!!! tip Some site generators and code editor extensions allow you to directly copy and paste an image into the code.
 
 ---
 
@@ -248,14 +244,16 @@ You can align text in the columns to the left, right, or center by adding a colo
 
 **Input:**
 
-  | Syntax | Description | Test Text |
+```markdown
+  | Left | Center | Right |
   | :--- | :----: | ---: |
   | Heading | Title | Here's this |
   | Paragraph | Text | And more |
+  ```
 
 **Output:**
 
-| Syntax | Description | Test Text |
+| Left | Center | Right |
 | :--- | :----: | ---: |
 | Heading | Title | Here's this |
 | Paragraph | Text | And more |
@@ -278,11 +276,23 @@ Use the `git commit` command.
 
 ### 8.2. Fenced code blocks
 
-To display lines of code within Markdown, add` ``` `on the lines before and after the code.
+To display lines of code within Markdown, add ` ``` ` on the lines before and after the code.
 
 !!! tip "Syntax highlighting"
-    If you want to highlight the syntax specific to the displayed code, add the name after the /``` on the first line.
-    Example: ```java
+    If you want to highlight the syntax specific to the displayed code, add the syntax name after the ` ``` ` on the first line.
+    For example: ` ```java `
+
+Like this:
+
+    ```html
+    <html>
+      <head>
+        <title>Test</title>
+      </head>
+    </html>
+    ```
+
+Example:
 
 ```html
 <html>
@@ -364,7 +374,7 @@ Here is a sentence with a footnote.[^1]
 [^1]: Footnote text.
 ```
 
-### 12.2 Blockquotes
+### 12.2 Admonitions
 
 Use the following examples for the type of content they describe:
 
@@ -415,7 +425,7 @@ Quick reference for the most common Markdown features:
 | Element           | Markdown           |
 | ----------------- | ------------------ |
 | Blockquote        | `> Quote`          |
-| Nested blockquote | `> > Nested quote` |
+| Nested blockquote | `>> Nested quote` |
 
 ## 13.4. Lists
 
@@ -472,28 +482,31 @@ Quick reference for the most common Markdown features:
 
 ## 13.8.1. Inline code
 
+```markdown
 `code`
+```
 
 ## 13.8.2. Fenced code block
 
-```html
-<html>
-  <head>
-    <title>Example</title>
-  </head>
-</html>
-```
+    ```html
+    <html>
+      <head>
+        <title>Example</title>
+      </head>
+    </html>
+    ```
 
 ## 13.8.3. Indented code block
 
+```markdown
   Code example
+```
 
 ## 13.9. Escaping characters
 
 | Markdown     | Result    |
 | ------------ | --------- |
 | `\# Heading` | # Heading |
-| `\*text\*`   | *text*    |
 
 ## 13.10. Separators
 
