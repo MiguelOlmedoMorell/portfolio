@@ -3,11 +3,19 @@ site_description: Miguel Olmedo Morell's Portfolio
 
 theme:
   name: material
+  language: en
+  favicon: 'images/favicon.jpg' 
   features:
     - navigation.tabs
     - navigation.sections
-    - toc.integrate
+    - navigation.top
     - content.code.copy
+    - search.highlight
+    - search.suggest
+  palette:
+    - scheme: default
+      primary: green
+      accent: purple
 
 repo_url: https://github.com/miguelolmedomorell/portfolio
 repo_name: miguelolmedomorell/portfolio
@@ -17,6 +25,7 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - attr_list
   - pymdownx.highlight:
       anchor_linenums: true
 
