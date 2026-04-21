@@ -14,7 +14,7 @@ theme:
     - search.suggest
   palette:
     - scheme: default
-      primary: blue grey
+      primary: indigo
       accent: grey
 
 repo_url: https://github.com/miguelolmedomorell/portfolio
