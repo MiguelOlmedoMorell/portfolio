@@ -3,13 +3,24 @@
 __pycache__/
 *.pyc
 
-# MkDocs
+# MkDocs build output
 site/
+
+# Packaging
+build/
+dist/
+*.egg-info/
+
+# IDE
+.vscode/
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
 
 # Node
 node_modules/
 npm-debug.log*
 package-lock.json
-
-# macOS
-.DS_Store

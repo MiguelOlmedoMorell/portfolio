@@ -4,7 +4,7 @@ site_description: Miguel Olmedo Morell's Portfolio
 theme:
   name: material
   language: en
-  favicon: 'images/favicon.jpg' 
+  favicon: 'technical-documentation/favicon.jpg' 
   features:
     - navigation.tabs
     - navigation.sections
@@ -14,8 +14,8 @@ theme:
     - search.suggest
   palette:
     - scheme: default
-      primary: green
-      accent: purple
+      primary: blue grey
+      accent: grey
 
 repo_url: https://github.com/miguelolmedomorell/portfolio
 repo_name: miguelolmedomorell/portfolio

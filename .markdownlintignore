@@ -1,3 +1,7 @@
 node_modules/
 site/
 .venv/
+.git/
+.vscode/
+build/
+dist/
